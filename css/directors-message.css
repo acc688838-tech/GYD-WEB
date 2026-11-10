@@ -1,0 +1,233 @@
+/* =====================================================
+   GET YOUR DOCTORATE — DIRECTOR'S MESSAGE
+   Scoped styles: #gyd-director-page
+   ===================================================== */
+
+
+/* ================= PAGE BASE ================= */
+
+#gyd-director-page {
+  --navy: #071c42;
+  --blue: #050f28;
+  --gold: #c9a227;
+  --light: #f6f8fb;
+  --text: #333;
+  --white: #ffffff;
+
+  margin: 0;
+  padding: 0;
+
+  font-family: "Inter", sans-serif;
+  color: var(--text);
+  background: var(--light);
+  line-height: 1.75;
+}
+
+#gyd-director-page,
+#gyd-director-page * {
+  box-sizing: border-box;
+}
+
+
+/* ================= HERO ================= */
+
+#gyd-director-page .hero {
+  background:
+    linear-gradient(
+      120deg,
+      rgba(11, 37, 69, 0.92),
+      rgba(29, 78, 137, 0.88)
+    ),
+    url("https://images.unsplash.com/photo-1523240795612-9a054b0df194?auto=format&fit=crop&w=1600&q=80")
+      center / cover no-repeat;
+
+  color: var(--white);
+  text-align: center;
+  padding: 95px 20px;
+}
+
+#gyd-director-page .hero h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 44px;
+  margin-bottom: 18px;
+}
+
+#gyd-director-page .hero p {
+  max-width: 850px;
+  margin: 0 auto;
+  font-size: 18px;
+  color: #e8eef6;
+}
+
+#gyd-director-page .hero .tagline {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 30px;
+
+  border: 2px solid var(--gold);
+  border-radius: 40px;
+
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+
+/* ================= DIRECTOR MESSAGE SECTION ================= */
+
+#gyd-director-page .message-section {
+  padding: 80px 5%;
+}
+
+#gyd-director-page .container {
+  max-width: 1100px;
+  margin: auto;
+  background: var(--white);
+  padding: 55px;
+  border-radius: 18px;
+  box-shadow: 0 15px 40px rgba(11, 37, 69, 0.10);
+}
+
+#gyd-director-page .section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#gyd-director-page .section-title h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 36px;
+  color: var(--navy);
+}
+
+#gyd-director-page .section-title p {
+  color: var(--blue);
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-top: 8px;
+}
+
+#gyd-director-page .message-content p {
+  margin-bottom: 22px;
+  font-size: 17px;
+}
+
+#gyd-director-page .message-content strong {
+  color: var(--navy);
+}
+
+
+/* ================= HIGHLIGHTED QUOTATIONS ================= */
+
+#gyd-director-page .quote {
+  background: #eef4fb;
+  border-left: 5px solid var(--gold);
+  padding: 22px 28px;
+  margin: 35px 0;
+
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--navy);
+
+  border-radius: 8px;
+}
+
+
+/* ================= DIRECTOR SIGNATURE ================= */
+
+#gyd-director-page .director-card {
+  margin-top: 50px;
+  padding-top: 35px;
+  border-top: 1px solid #e2e8f0;
+  text-align: center;
+}
+
+#gyd-director-page .director-card h3 {
+  font-family: "Playfair Display", serif;
+  color: var(--navy);
+  font-size: 24px;
+}
+
+#gyd-director-page .director-card p {
+  color: var(--blue);
+  font-weight: 600;
+  margin-top: 6px;
+}
+
+
+/* ================= ORIGINAL OPTIONAL PAGE HEADER ================= */
+/* Retained but scoped; does not affect the shared site header. */
+
+#gyd-director-page .site-header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 18px 5%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+#gyd-director-page .brand {
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+#gyd-director-page .brand span {
+  color: var(--gold);
+}
+
+#gyd-director-page .nav {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+#gyd-director-page .nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+#gyd-director-page .nav a:hover {
+  color: var(--gold);
+}
+
+
+/* ================= ORIGINAL OPTIONAL PAGE FOOTER ================= */
+/* Retained but scoped; does not affect .gyd-footer. */
+
+#gyd-director-page .site-footer {
+  background: var(--navy);
+  color: #dce6f2;
+  text-align: center;
+  padding: 35px 20px;
+  margin-top: 60px;
+}
+
+#gyd-director-page .site-footer h4 {
+  font-family: "Playfair Display", serif;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  #gyd-director-page .hero h1 {
+    font-size: 32px;
+  }
+
+  #gyd-director-page .container {
+    padding: 30px 22px;
+  }
+
+  #gyd-director-page .nav {
+    justify-content: center;
+  }
+}
