@@ -1,0 +1,539 @@
+/* =====================================================
+   GET YOUR DOCTORATE — ABOUT PAGE
+   Scoped styles: #gyd-about-page
+   ===================================================== */
+
+
+/* ================= SCOPED BASE STYLES ================= */
+
+#gyd-about-page,
+#gyd-about-page *,
+#gyd-about-page *::before,
+#gyd-about-page *::after {
+  box-sizing: border-box;
+}
+
+#gyd-about-page {
+  --gyd-navy: #071c42;
+  --gyd-deep: #050f28;
+  --gyd-gold: #dfa04e;
+  --gyd-light-gold: #f3c268;
+  --gyd-white: #ffffff;
+  --gyd-text: #e1e7f1;
+
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  overflow: hidden;
+
+  background: var(--gyd-deep);
+  color: var(--gyd-white);
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.7;
+}
+
+/* Content stays visible, even if scripts are blocked. */
+
+#gyd-about-page .gyd-reveal {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+
+#gyd-about-page .gyd-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1240px;
+  margin-inline: auto;
+  padding-inline: clamp(18px, 4vw, 48px);
+}
+
+
+/* ================= SHARED TEXT ================= */
+
+#gyd-about-page .gyd-text {
+  margin: 0 0 20px;
+  color: var(--gyd-text);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.9;
+  text-align: left;
+  overflow-wrap: break-word;
+}
+
+#gyd-about-page .gyd-text:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ================= ABOUT SECTION ================= */
+
+#gyd-about-page .gyd-about {
+  position: relative;
+  isolation: isolate;
+  padding-block: clamp(45px, 7vw, 90px);
+
+  background:
+    radial-gradient(
+      ellipse at 10% 15%,
+      rgba(223, 160, 78, 0.14),
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse at 95% 85%,
+      rgba(50, 112, 220, 0.19),
+      transparent 60%
+    ),
+    linear-gradient(
+      145deg,
+      #07152f,
+      #0a2450
+    );
+}
+
+#gyd-about-page .gyd-about::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    );
+
+  background-size: 58px 58px;
+}
+
+#gyd-about-page .gyd-about-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 28px;
+}
+
+
+/* ================= ABOUT CARDS ================= */
+
+#gyd-about-page .gyd-card {
+  position: relative;
+  min-width: 0;
+  padding: clamp(25px, 3vw, 40px);
+  overflow: hidden;
+
+  border: 1px solid rgba(223, 160, 78, 0.28);
+  border-radius: 24px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.075),
+    rgba(255, 255, 255, 0.025)
+  );
+
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.07);
+
+  transition:
+    transform 300ms ease,
+    border-color 300ms ease,
+    box-shadow 300ms ease;
+}
+
+#gyd-about-page .gyd-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 30px;
+  right: 30px;
+  height: 2px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--gyd-light-gold),
+    transparent
+  );
+
+  pointer-events: none;
+}
+
+#gyd-about-page .gyd-card--accent {
+  background: linear-gradient(
+    145deg,
+    rgba(223, 160, 78, 0.12),
+    rgba(255, 255, 255, 0.035)
+  );
+}
+
+#gyd-about-page .gyd-icon-box {
+  display: grid;
+  place-items: center;
+
+  width: 64px;
+  height: 64px;
+  margin-bottom: 24px;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 18px;
+
+  background: linear-gradient(
+    135deg,
+    #ffe0a0,
+    var(--gyd-gold)
+  );
+
+  color: var(--gyd-navy);
+  box-shadow: 0 10px 25px rgba(223, 160, 78, 0.2);
+}
+
+#gyd-about-page .gyd-icon-box svg {
+  display: block;
+  width: 32px;
+  height: 32px;
+
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+#gyd-about-page .gyd-card-title {
+  margin: 0;
+  padding: 0;
+
+  color: var(--gyd-white);
+  font-family: inherit;
+  font-size: clamp(25px, 2.6vw, 34px);
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: 0.035em;
+}
+
+#gyd-about-page .gyd-title-line {
+  width: 72px;
+  height: 4px;
+  margin: 18px 0 25px;
+  border-radius: 10px;
+
+  background: linear-gradient(
+    90deg,
+    var(--gyd-light-gold),
+    var(--gyd-gold),
+    transparent
+  );
+}
+
+
+/* ================= LOCATION CHIP ================= */
+
+#gyd-about-page .gyd-location {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  max-width: 100%;
+  margin: 25px 0 0;
+  padding: 12px 16px;
+
+  border: 1px solid rgba(223, 160, 78, 0.35);
+  border-radius: 16px;
+
+  background: rgba(223, 160, 78, 0.1);
+  color: #ffe4b2;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+#gyd-about-page .gyd-location svg {
+  display: block;
+  flex: 0 0 20px;
+  width: 20px;
+  height: 20px;
+
+  fill: none;
+  stroke: var(--gyd-light-gold);
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+#gyd-about-page .gyd-location span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+
+/* ================= WHY CHOOSE US ================= */
+
+#gyd-about-page .gyd-why {
+  position: relative;
+  isolation: isolate;
+
+  padding-block: clamp(45px, 7vw, 90px);
+  border-top: 1px solid rgba(223, 160, 78, 0.18);
+
+  background:
+    radial-gradient(
+      ellipse at 90% 20%,
+      rgba(223, 160, 78, 0.1),
+      transparent 55%
+    ),
+    linear-gradient(
+      145deg,
+      #050f28,
+      #081d40
+    );
+}
+
+#gyd-about-page .gyd-why-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  align-items: center;
+  gap: clamp(28px, 4vw, 55px);
+}
+
+#gyd-about-page .gyd-why-intro {
+  min-width: 0;
+}
+
+#gyd-about-page .gyd-why-title {
+  margin: 0 0 25px;
+  padding: 0;
+
+  color: var(--gyd-white);
+  font-family: inherit;
+  font-size: clamp(30px, 3.6vw, 48px);
+  font-weight: 850;
+  line-height: 1.2;
+  letter-spacing: 0.015em;
+}
+
+#gyd-about-page .gyd-why-title em {
+  color: var(--gyd-light-gold);
+  font-style: normal;
+}
+
+
+/* ================= BENEFITS PANEL ================= */
+
+#gyd-about-page .gyd-benefits {
+  position: relative;
+  min-width: 0;
+  padding: clamp(24px, 3vw, 36px);
+
+  border: 1px solid rgba(223, 160, 78, 0.3);
+  border-radius: 24px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.075),
+    rgba(255, 255, 255, 0.025)
+  );
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.24);
+
+  transition:
+    transform 300ms ease,
+    border-color 300ms ease;
+}
+
+#gyd-about-page .gyd-benefits-title {
+  margin: 0 0 25px;
+  padding: 0;
+
+  color: var(--gyd-light-gold);
+  font-family: inherit;
+  font-size: clamp(21px, 2vw, 25px);
+  font-weight: 750;
+  line-height: 1.4;
+}
+
+#gyd-about-page .gyd-benefits-list {
+  display: grid;
+  gap: 15px;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#gyd-about-page .gyd-benefits-list li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  min-width: 0;
+  margin: 0;
+  padding: 16px;
+
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 15px;
+
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--gyd-white);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.6;
+
+  transition:
+    transform 250ms ease,
+    background 250ms ease,
+    border-color 250ms ease;
+}
+
+#gyd-about-page .gyd-benefit-icon {
+  display: grid;
+  place-items: center;
+
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+  background: linear-gradient(
+    135deg,
+    #ffe0a0,
+    var(--gyd-gold)
+  );
+
+  color: var(--gyd-navy);
+  box-shadow: 0 6px 16px rgba(223, 160, 78, 0.15);
+}
+
+#gyd-about-page .gyd-benefit-icon svg {
+  display: block;
+  width: 22px;
+  height: 22px;
+
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+#gyd-about-page .gyd-benefit-text {
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+
+
+/* ================= DESKTOP HOVER EFFECTS ================= */
+
+@media (hover: hover) and (pointer: fine) {
+  #gyd-about-page .gyd-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(223, 160, 78, 0.65);
+
+    box-shadow:
+      0 28px 55px rgba(0, 0, 0, 0.3),
+      0 0 24px rgba(223, 160, 78, 0.06);
+  }
+
+  #gyd-about-page .gyd-benefits:hover {
+    transform: translateY(-5px);
+    border-color: rgba(223, 160, 78, 0.6);
+  }
+
+  #gyd-about-page .gyd-benefits-list li:hover {
+    transform: translateX(4px);
+    border-color: rgba(223, 160, 78, 0.35);
+    background: rgba(223, 160, 78, 0.09);
+  }
+}
+
+
+/* ================= OPTIONAL ENTRANCE EFFECT ================= */
+
+/* The starting opacity is 1: text never becomes invisible. */
+
+@keyframes gydContentEnter {
+  from {
+    opacity: 1;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#gyd-about-page .gyd-enter {
+  animation: gydContentEnter 650ms cubic-bezier(.2, .7, .2, 1) both;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+  #gyd-about-page .gyd-about-grid,
+  #gyd-about-page .gyd-why-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  #gyd-about-page .gyd-about-grid {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  #gyd-about-page .gyd-card,
+  #gyd-about-page .gyd-benefits {
+    border-radius: 18px;
+  }
+
+  #gyd-about-page .gyd-icon-box {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+  }
+
+  #gyd-about-page .gyd-text {
+    font-size: 15px;
+    line-height: 1.85;
+  }
+
+  #gyd-about-page .gyd-benefits-list li {
+    gap: 11px;
+    padding: 13px;
+    font-size: 14px;
+  }
+
+  #gyd-about-page .gyd-benefit-icon {
+    flex-basis: 35px;
+    width: 35px;
+    height: 35px;
+  }
+}
+
+
+/* ================= REDUCED MOTION ================= */
+
+@media (prefers-reduced-motion: reduce) {
+  #gyd-about-page *,
+  #gyd-about-page *::before,
+  #gyd-about-page *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  #gyd-about-page .gyd-card,
+  #gyd-about-page .gyd-benefits,
+  #gyd-about-page .gyd-benefits-list li {
+    transform: none !important;
+  }
+}
